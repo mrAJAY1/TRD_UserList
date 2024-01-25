@@ -10,7 +10,7 @@ const UserDetails = () => {
       data.name.first === id.split(" ")[0] &&
       data.name.last === id.split(" ")[1]
   )[0];
-  console.log(user);
+  if (!user) return <h1>Data not found</h1>;
   return (
     <div className="container mt-5 mx-auto flex flex-col items-center justify-center h-dvh">
       <button
